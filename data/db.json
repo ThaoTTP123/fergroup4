@@ -1,0 +1,264 @@
+{
+    "customers": [
+      {
+        "_id": 1,
+        "name": "John Doe",
+        "email": "john.doe@example.com",
+        "address": "123 Main St, City",
+        "phone": "+1 (123) 456-7890",
+        "password": "hashed_password",
+        "created_at": "2023-10-15T12:00:00Z"
+      },
+      {
+        "_id": 2,
+        "name": "Alice Smith",
+        "email": "alice.smith@example.com",
+        "address": "456 Elm St, Town",
+        "phone": "+1 (987) 654-3210",
+        "password": "hashed_password",
+        "created_at": "2023-10-15T13:00:00Z"
+      }
+    ],
+    "cakes": [
+      {
+        "_id": 1,
+        "name": "Chocolate Cake",
+        "description": "A rich and moist chocolate cake",
+        "price": 25.99,
+        "image_url": "product1.jpg",
+        "available_quantity": 50,
+        "category_id": 1,
+        "created_at": "2023-10-15T14:30:00Z"
+      },
+      {
+        "_id": 2,
+        "name": "Vanilla Cake",
+        "description": "A classic vanilla cake",
+        "price": 22.99,
+        "image_url": "product1.jpg",
+        "available_quantity": 40,
+        "category_id": 1,
+        "created_at": "2023-10-15T15:30:00Z"
+      },
+      {
+        "_id": 3,
+        "name": "Red Velvet Cake",
+        "description": "A velvety and smooth red velvet cake",
+        "price": 27.99,
+        "image_url": "product1.jpg",
+        "available_quantity": 30,
+        "category_id": 2,
+        "created_at": "2023-10-15T16:30:00Z"
+      },
+      {
+        "_id": 4,
+        "name": "Strawberry Shortcake",
+        "description": "A light and fruity strawberry shortcake",
+        "price": 19.99,
+        "image_url": "product1.jpg",
+        "available_quantity": 35,
+        "category_id": 3,
+        "created_at": "2023-10-15T17:30:00Z"
+      },
+      {
+        "_id": 5,
+        "name": "Carrot Cake",
+        "description": "A moist and spiced carrot cake",
+        "price": 23.99,
+        "image_url": "product1.jpg",
+        "available_quantity": 25,
+        "category_id": 4,
+        "created_at": "2023-10-15T18:30:00Z"
+      },
+      {
+        "_id": 6,
+        "name": "Fruit Tart",
+        "description": "A delightful fruit tart with a buttery crust",
+        "price": 21.99,
+        "image_url": "product1.jpg",
+        "available_quantity": 20,
+        "category_id": 1,
+        "created_at": "2023-10-15T19:30:00Z"
+      },
+      {
+        "_id": 7,
+        "name": "Cheesecake",
+        "description": "A creamy and smooth cheesecake",
+        "price": 29.99,
+        "image_url": "product1.jpg",
+        "available_quantity": 15,
+        "category_id": 2,
+        "created_at": "2023-10-15T20:30:00Z"
+      },
+      {
+        "_id": 8,
+        "name": "Lemon Cake",
+        "description": "A zesty and tangy lemon cake",
+        "price": 26.99,
+        "image_url": "product1.jpg",
+        "available_quantity": 10,
+        "category_id": 3,
+        "created_at": "2023-10-15T21:30:00Z"
+      },
+      {
+        "_id": 9,
+        "name": "Pineapple Upside-Down Cake",
+        "description": "A classic pineapple upside-down cake",
+        "price": 24.99,
+        "image_url": "product1.jpg",
+        "available_quantity": 10,
+        "category_id": 4,
+        "created_at": "2023-10-15T22:30:00Z"
+      },
+      {
+        "_id": 10,
+        "name": "Black Forest Cake",
+        "description": "A delightful black forest cake with cherries",
+        "price": 28.99,
+        "image_url": "product1.jpg",
+        "available_quantity": 5,
+        "category_id": 5,
+        "created_at": "2023-10-15T23:30:00Z"
+      }
+    ],
+    "admins": [
+      {
+        "_id": 1,
+        "username": "admin_user",
+        "password": "hashed_password",
+        "email": "admin@example.com",
+        "created_at": "2023-10-15T16:00:00Z"
+      }
+    ],
+    "categories": [
+      {
+        "_id": 1,
+        "name": "Dessert",
+        "description": "Delicious dessert cakes",
+        "created_at": "2023-10-15T16:30:00Z"
+      },
+      {
+        "_id": 2,
+        "name": "Specialty",
+        "description": "Specialty cakes for unique occasions",
+        "created_at": "2023-10-15T16:45:00Z"
+      },
+      {
+        "_id": 3,
+        "name": "Fruit",
+        "description": "Fruit-flavored cakes",
+        "created_at": "2023-10-15T17:00:00Z"
+      },
+      {
+        "_id": 4,
+        "name": "Spice",
+        "description": "Spice-infused cakes",
+        "created_at": "2023-10-15T17:15:00Z"
+      },
+      {
+        "_id": 5,
+        "name": "Custom",
+        "description": "Custom cakes for personalization",
+        "created_at": "2023-10-15T17:30:00Z"
+      }
+    ],
+    "additionalItems": [
+      {
+        "_id": 1,
+        "name": "Birthday Candles",
+        "description": "Pack of colorful birthday candles",
+        "price": 3.99,
+        "image_url": "https://example.com/birthday-candles.jpg",
+        "available_quantity": 100,
+        "created_at": "2023-10-15T17:30:00Z"
+      }
+    ],
+    "orders": [
+      {
+        "_id": 1,
+        "customer_id": 1,
+        "items": [
+          {
+            "cake_id": 1,
+            "quantity": 2,
+            "price": 51.98
+          },
+          {
+            "additional_item_id": 1,
+            "quantity": 1,
+            "price": 3.99
+          }
+        ],
+        "total_price": 55.97,
+        "order_date": "2023-10-15T18:00:00Z",
+        "status": "Pending"
+      },
+      {
+        "_id": 2,
+        "customer_id": 2,
+        "items": [
+          {
+            "cake_id": 3,
+            "quantity": 1,
+            "price": 27.99
+          },
+          {
+            "additional_item_id": 1,
+            "quantity": 2,
+            "price": 7.98
+          }
+        ],
+        "total_price": 35.97,
+        "order_date": "2023-10-15T19:00:00Z",
+        "status": "Shipped"
+      },
+      {
+        "_id": 3,
+        "customer_id": 1,
+        "items": [
+          {
+            "cake_id": 7,
+            "quantity": 1,
+            "price": 29.99
+          },
+          {
+            "additional_item_id": 1,
+            "quantity": 1,
+            "price": 3.99
+          }
+        ],
+        "total_price": 33.98,
+        "order_date": "2023-10-15T20:00:00Z",
+        "status": "Delivered"
+      },
+      {
+        "_id": 4,
+        "customer_id": 2,
+        "items": [
+          {
+            "cake_id": 2,
+            "quantity": 1,
+            "price": 22.99
+          }
+        ],
+        "total_price": 22.99,
+        "order_date": "2023-10-15T21:00:00Z",
+        "status": "Pending"
+      },
+      {
+        "_id": 5,
+        "customer_id": 1,
+        "items": [
+          {
+            "cake_id": 6,
+            "quantity": 1,
+            "price": 21.99
+          }
+        ],
+        "total_price": 21.99,
+        "order_date": "2023-10-15T22:00:00Z",
+        "status": "Shipped"
+      }
+    ]
+  }
+  
