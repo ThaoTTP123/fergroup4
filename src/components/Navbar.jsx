@@ -19,7 +19,7 @@ export default function Navbar({ open, setOpen }) {
   console.log(url);
   return (
     <nav>
-      <div className="max-w-7xl mx-auto shadow-lg px-2 sm:px-2 lg:px-8 py-2">
+      <div className="mx-auto shadow-lg px-2 sm:px-2 lg:px-8 py-2">
         <div className="flex justify-between item-center relative">
           {/* mobile button */}
           <div className="md:hidden flex items-center w-[180px]">
@@ -86,7 +86,7 @@ export default function Navbar({ open, setOpen }) {
       </div>
       {/* mobile menu */}
       {open && (
-        <div className="px-2">
+        <div className="px-2 md:hidden">
           {navItems.map((item) => (
             <Link
               to={item.path}
