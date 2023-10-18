@@ -1,6 +1,6 @@
 import React from 'react';
 import OrderHistory from '../../components/OrderHistory';
-export default function Cake() {
+export default function History() {
   return(
   <div class="p-5 h-screen bg-gray-100">
     <h1 class="text-xl mb-2">Your orders</h1>
@@ -32,7 +32,7 @@ export default function Cake() {
         <tbody class="divide-y divide-gray-100">
         <tr class="bg-white">
           <td class="p-3 text-sm text-gray-700 whitespace-nowrap">
-            <a href="#" class="font-bold text-blue-500 hover:underline">10001</a>
+            <a href="/history/details" class="font-bold text-blue-500 hover:underline">10001</a>
           </td>
           <td class="p-3 text-sm text-gray-700 whitespace-nowrap" >2 Chocolate Cake, 1 Birthday Candles</td>
           <td class="p-3 text-sm text-gray-700 whitespace-nowrap">

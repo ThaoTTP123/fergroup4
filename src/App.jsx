@@ -7,7 +7,7 @@ import Cake from './pages/customer/Cake';
 import { useState } from 'react';
 import Cart from './pages/customer/Cart';
 import OrderHistory from './pages/customer/OrderHistory';
-
+import Profile from './pages/customer/Profile';
 function App() {
   const [open, setOpen] = useState(false);
   const StudentLayout = () => {
@@ -34,6 +34,7 @@ function App() {
           <Route path="/cake" element={<Cake />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/history" element={<OrderHistory />} />
+          <Route path="/profile" element={<Profile />} />
         </Route>
         <Route path="admin" element={<AdminLayout />}>
           <Route path="" element={<Dashboard />} />

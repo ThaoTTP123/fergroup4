@@ -55,6 +55,7 @@ export default function Navbar({ open, setOpen }) {
           {/* right-nav-section */}
           <div className="flex items-center space-x-1">
             <button
+              onClick={() => navigate('/profile')}
               className="hover:bg-slate-950 hover:text-white transition-colors duration-600 h-[100%]
             border border-black rounded-xl px-5 py-1"
             >
