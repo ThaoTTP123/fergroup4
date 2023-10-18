@@ -9,8 +9,9 @@ export default function Profile() {
       <div class="bg-white rounded shadow-lg p-4 px-4 md:p-8 mb-6">
         <div class="grid gap-4 gap-y-2 text-sm grid-cols-1 lg:grid-cols-3">
           <div class="text-gray-600">
-            <p class="font-medium text-lg">Personal Details</p>
-            <p>User Avatar</p>
+            <p class="font-medium text-lg ml-3">Personal Details</p>
+            <img class="w-41 h-40 rounded-full mt-9 " src="public\5928164.png" alt="Rounded avatar"></img>
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ml-4 mt-5">Upload Avatar</button>
           </div>
 
           <div class="lg:col-span-2">
