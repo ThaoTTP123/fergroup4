@@ -6,6 +6,7 @@ import Dashboard from './pages/admin/Dashboard';
 import Cake from './pages/customer/Cake';
 import { useState } from 'react';
 import Cart from './pages/customer/Cart';
+import OrderHistory from './pages/customer/OrderHistory';
 
 function App() {
   const [open, setOpen] = useState(false);
@@ -32,6 +33,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/cake" element={<Cake />} />
           <Route path="/cart" element={<Cart />} />
+          <Route path="/history" element={<OrderHistory />} />
         </Route>
         <Route path="admin" element={<AdminLayout />}>
           <Route path="" element={<Dashboard />} />
