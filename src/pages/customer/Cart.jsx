@@ -1,12 +1,8 @@
-import React from 'react';
 import CartItem from '../../components/CartItem';
 
 export default function Cart() {
   return (
     <div class="bg-gray-100">
-      <div className="">
-        <img src="/banner.jpg" alt="" className="object-cover w-full" />
-      </div>
       <h1 class="mb-10 text-center text-2xl font-bold">Cart Items</h1>
       <div class="mx-auto max-w-5xl justify-center px-6 md:flex md:space-x-6 xl:px-0">
         <div class="rounded-lg md:w-2/3">
