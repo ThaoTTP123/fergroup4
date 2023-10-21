@@ -3,7 +3,7 @@ import React from 'react';
 export default function CakesItem({ product }) {
   return (
     <section className="p-5 py-10 bg-purple-50 text-center transform duration-500 hover:-translate-y-2 cursor-pointer">
-      <img src={product.image_url} alt />
+      <img src={product.image_url} />
       <div className="space-x-1 flex justify-center mt-10">
         <svg
           className="w-4 h-4 mx-px fill-current text-orange-600"

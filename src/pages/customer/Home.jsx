@@ -36,7 +36,7 @@ export default function Home() {
           <h1 className="inline text-[30px] font-bold font-['Roboto','Poppins'] uppercase">
             Hot Sales
           </h1>
-          <hr class="my-1 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-red-400 to-transparent opacity-25 dark:opacity-100" />
+          <hr className="my-1 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-red-400 to-transparent opacity-25 dark:opacity-100" />
         </div>
         <div className="grid md:grid-cols-4 gap-6 p-4">
           {featureCakes.map((product) => {
