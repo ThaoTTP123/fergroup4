@@ -1,8 +1,9 @@
-import axios from '../axios';
+import { useEffect } from 'react';
 import { createContext, useState } from 'react';
-const getItemById = async (id) => {
-  const res = await axios.get(`cakes/${id}`);
-  return res.data;
+const getDedaultCart = () => {
+  const cartProduct = localStorage.getItem('items');
+  if (cartProduct) return JSON.parse(cartProduct);
+  else return [];
 };
 export const CartContext = createContext({
   items: [],
@@ -13,7 +14,7 @@ export const CartContext = createContext({
   getTotalCost: () => {},
 });
 function CartProvider({ children }) {
-  const [cartProduct, setCartProduct] = useState([]);
+  const [cartProduct, setCartProduct] = useState(getDedaultCart);
   const getQuantity = (id) => {
     const quantity = cartProduct.find((el) => el.id === id)?.quantity;
     if (quantity === undefined) return 0;
@@ -59,6 +60,9 @@ function CartProvider({ children }) {
     deleteAll,
     getTotalCost,
   };
+  useEffect(() => {
+    localStorage.setItem('items', JSON.stringify(cartProduct));
+  }, [cartProduct]);
   return (
     <CartContext.Provider value={contextValue}>{children}</CartContext.Provider>
   );
