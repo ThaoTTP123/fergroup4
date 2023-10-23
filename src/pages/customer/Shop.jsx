@@ -11,13 +11,16 @@ import {
 } from 'react-icons/fa6';
 export default function Shop() {
   const [pageCount, setPageCount] = useState(6);
+  const [page, setPage] = useState(0);
   const [cakeList, setCakeList] = useState([]);
   const [categoryList, setCategoryList] = useState([]);
   const [filterQuery, setFilterQuery] = useState('');
   const [Checked, setChecked] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [openFilter, setOpenFilter] = useState(false);
-  const handlePageClick = () => {};
+  const handlePageClick = (e) => {
+    setPage(e.selected);
+  };
   const handleFilter = (value) => {
     const checkedIndex = Checked.indexOf(value);
     const newChecked = [...Checked];
@@ -29,7 +32,9 @@ export default function Shop() {
     setChecked(newChecked);
   };
   const fetchCakes = async () => {
-    const res = await axios.get(`cakes?_page=1&_limit=5${filterQuery}`);
+    const res = await axios.get(
+      `cakes?_page=${page + 1}&_limit=5${filterQuery}`
+    );
     setCakeList(res.data);
     setIsLoading(false);
   };
@@ -45,12 +50,16 @@ export default function Shop() {
     setFilterQuery(newQuery);
   }, [Checked]);
   useEffect(() => {
-    setIsLoading(true);
     fetchCakes();
-  }, [filterQuery]);
+    setIsLoading(true);
+  }, [filterQuery, page]);
   useEffect(() => {
+    (async () => {
+      const res = await axios.get(`cakes?${filterQuery}`);
+      setPageCount(res.data.length / 5);
+    })();
     fetchCategories();
-  }, []);
+  }, [filterQuery]);
   if (isLoading) {
     return (
       <div role="status" className="flex justify-center">
@@ -171,9 +180,9 @@ export default function Shop() {
                   <FaChevronRight />
                 </span>
               }
+              forcePage={page}
               onPageChange={handlePageClick}
-              pageRangeDisplayed={3}
-              pageCount={50}
+              pageCount={pageCount}
               previousLabel={
                 <span className=" bg-gray-400 h-10 w-10 flex items-center justify-center rounded-md mr-3">
                   <FaChevronLeft />
