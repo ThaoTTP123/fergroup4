@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import {
   FaUser,
@@ -6,9 +6,10 @@ import {
   FaClockRotateLeft,
   FaBars,
 } from 'react-icons/fa6';
+import { CartContext } from '../context/CartContext';
 const navItems = [
   { name: 'Home', path: '/' },
-  { name: 'Cake', path: '/cake' },
+  { name: 'Shop', path: '/shop' },
   { name: 'Occassion', path: '/occasion' },
   { name: 'Item', path: '/item' },
 ];
@@ -16,10 +17,10 @@ const possible = [];
 export default function Navbar({ open, setOpen }) {
   const url = useLocation().pathname;
   const navigate = useNavigate();
-  console.log(url);
+  const { items } = useContext(CartContext);
   return (
     <nav>
-      <div className="max-w-7xl mx-auto shadow-lg px-2 sm:px-2 lg:px-8 py-2">
+      <div className="mx-auto shadow-lg px-2 sm:px-2 lg:px-8 py-2">
         <div className="flex justify-between item-center relative">
           {/* mobile button */}
           <div className="md:hidden flex items-center w-[180px]">
@@ -45,7 +46,7 @@ export default function Navbar({ open, setOpen }) {
               <Link className="px-4 py-2" to={'/'}>
                 HOME
               </Link>
-              <Link className="px-4 py-2" to={'/cake'}>
+              <Link className="px-4 py-2" to={'/shop'}>
                 CAKE
               </Link>
               <Link className="px-4 py-2">OCCASIONS</Link>
@@ -71,7 +72,7 @@ export default function Navbar({ open, setOpen }) {
                   className="absolute -right-2 -top-2 w-3 h-3 rounded-lg bg-red-600 text-white text-[8px]
             flex justify-center items-center"
                 >
-                  0
+                  {items.length}
                 </span>
               </div>
             </button>
@@ -88,7 +89,7 @@ export default function Navbar({ open, setOpen }) {
       </div>
       {/* mobile menu */}
       {open && (
-        <div className="px-2">
+        <div className="px-2 md:hidden">
           {navItems.map((item) => (
             <Link
               to={item.path}
