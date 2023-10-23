@@ -8,6 +8,7 @@ instance.interceptors.request.use(
     if (config.url.endsWith('categoryid=')) {
       config.url = config.url.replace('categoryid=', '');
     }
+    console.log(config.url);
     return config;
   },
   function (error) {
