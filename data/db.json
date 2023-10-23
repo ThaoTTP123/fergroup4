@@ -27,7 +27,7 @@
         "price": 25.99,
         "image_url": "product1.jpg",
         "available_quantity": 50,
-        "categoryid": 1,
+        "categoryId": 1,
         "created_at": "2023-10-15T14:30:00Z"
       },
       {
@@ -37,7 +37,7 @@
         "price": 22.99,
         "image_url": "product1.jpg",
         "available_quantity": 40,
-        "categoryid": 1,
+        "categoryId": 1,
         "created_at": "2023-10-15T15:30:00Z"
       },
       {
@@ -47,7 +47,7 @@
         "price": 27.99,
         "image_url": "product1.jpg",
         "available_quantity": 30,
-        "categoryid": 2,
+        "categoryId": 2,
         "created_at": "2023-10-15T16:30:00Z"
       },
       {
@@ -57,7 +57,7 @@
         "price": 19.99,
         "image_url": "product1.jpg",
         "available_quantity": 35,
-        "categoryid": 3,
+        "categoryId": 3,
         "created_at": "2023-10-15T17:30:00Z"
       },
       {
@@ -67,7 +67,7 @@
         "price": 23.99,
         "image_url": "product1.jpg",
         "available_quantity": 25,
-        "categoryid": 4,
+        "categoryId": 4,
         "created_at": "2023-10-15T18:30:00Z"
       },
       {
@@ -77,7 +77,7 @@
         "price": 21.99,
         "image_url": "product1.jpg",
         "available_quantity": 20,
-        "categoryid": 1,
+        "categoryId": 1,
         "created_at": "2023-10-15T19:30:00Z"
       },
       {
@@ -87,7 +87,7 @@
         "price": 29.99,
         "image_url": "product1.jpg",
         "available_quantity": 15,
-        "categoryid": 2,
+        "categoryId": 2,
         "created_at": "2023-10-15T20:30:00Z"
       },
       {
@@ -97,7 +97,7 @@
         "price": 26.99,
         "image_url": "product1.jpg",
         "available_quantity": 10,
-        "categoryid": 3,
+        "categoryId": 3,
         "created_at": "2023-10-15T21:30:00Z"
       },
       {
@@ -107,7 +107,7 @@
         "price": 24.99,
         "image_url": "product1.jpg",
         "available_quantity": 10,
-        "categoryid": 4,
+        "categoryId": 4,
         "created_at": "2023-10-15T22:30:00Z"
       },
       {
@@ -117,7 +117,7 @@
         "price": 28.99,
         "image_url": "product1.jpg",
         "available_quantity": 5,
-        "categoryid": 5,
+        "categoryId": 5,
         "created_at": "2023-10-15T23:30:00Z"
       }
     ],
@@ -176,7 +176,7 @@
     "orders": [
       {
         "id": 1,
-        "customerid": 1,
+        "customerId": 1,
         "items": [
           {
             "cakeid": 1,
@@ -195,7 +195,7 @@
       },
       {
         "id": 2,
-        "customerid": 2,
+        "customerId": 2,
         "items": [
           {
             "cakeid": 3,
@@ -214,7 +214,7 @@
       },
       {
         "id": 3,
-        "customerid": 1,
+        "customerId": 1,
         "items": [
           {
             "cakeid": 7,
@@ -233,7 +233,7 @@
       },
       {
         "id": 4,
-        "customerid": 2,
+        "customerId": 2,
         "items": [
           {
             "cakeid": 2,
@@ -247,7 +247,7 @@
       },
       {
         "id": 5,
-        "customerid": 1,
+        "customerId": 1,
         "items": [
           {
             "cakeid": 6,
