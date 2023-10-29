@@ -3,7 +3,7 @@ import { useContext } from 'react';
 import { CartContext } from '../context/CartContext';
 
 export default function CartItem({ product }) {
-  const { add, remove, deleteAll } = useContext(CartContext);
+  const { addOne, remove, deleteAll } = useContext(CartContext);
   return (
     <div className="justify-between mb-6 rounded-lg bg-white p-6 shadow-md sm:flex sm:justify-start">
       <img
@@ -35,7 +35,7 @@ export default function CartItem({ product }) {
             />
             <button
               type="button"
-              onClick={() => add(product)}
+              onClick={() => addOne(product)}
               className="cursor-pointer rounded-r bg-gray-100 py-1 px-3 duration-100 hover:bg-blue-500 hover:text-blue-50"
             >
               {' '}

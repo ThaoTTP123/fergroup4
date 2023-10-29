@@ -6,7 +6,7 @@ export default function Card({ product }) {
     <div className="relative">
       <Link className="w-[350px] h-[250px] group">
         <div
-          className="opacity-0 absolute w-full rounded-xl text-white bottom-[70px] 
+          className="absolute w-full rounded-xl text-white bottom-[70px] 
         group-hover:opacity-100 group-hover:-translate-y-5 transition transform duration-500 ease-in-out"
         >
           <button className="bg-red-500 hover:bg-red-400 border border-black rounded-xl px-5 py-1">
@@ -17,7 +17,7 @@ export default function Card({ product }) {
           <img
             src={product?.image_url}
             alt=""
-            className="h-full w-full object-cover object-center"
+            className="h-[232px] w-full object-cover object-center"
           />
         </div>
       </Link>

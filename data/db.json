@@ -1,24 +1,28 @@
 {
-    "customers": [
-      {
+  "customers": [
+    {
         "id": 1,
         "name": "John Doe",
         "email": "john.doe@example.com",
-        "address": "123 Main St, City",
-        "phone": "+1 (123) 456-7890",
+        "address": "123 Main St, New York, NY",
+        "phone": "+1 (234) 567-890",
         "password": "hashed_password",
-        "created_at": "2023-10-15T12:00:00Z"
-      },
-      {
+        "created_at": "2023-10-15T12:00:00Z",
+        "city": "New York",
+        "state": "NY"
+    },
+    {
         "id": 2,
         "name": "Alice Smith",
         "email": "alice.smith@example.com",
-        "address": "456 Elm St, Town",
+        "address": "456 Elm St, Los Angeles, CA",
         "phone": "+1 (987) 654-3210",
         "password": "hashed_password",
-        "created_at": "2023-10-15T13:00:00Z"
-      }
-    ],
+        "created_at": "2023-10-15T13:00:00Z",
+        "city": "Los Angeles",
+        "state": "CA"
+    }
+  ],
     "cakes": [
       {
         "id": 1,
@@ -35,7 +39,7 @@
         "name": "Vanilla Cake",
         "description": "A classic vanilla cake",
         "price": 22.99,
-        "image_url": "product1.jpg",
+        "image_url": "product2.jpg",
         "available_quantity": 40,
         "categoryId": 1,
         "created_at": "2023-10-15T15:30:00Z"
@@ -45,7 +49,7 @@
         "name": "Red Velvet Cake",
         "description": "A velvety and smooth red velvet cake",
         "price": 27.99,
-        "image_url": "product1.jpg",
+        "image_url": "product3.jpg",
         "available_quantity": 30,
         "categoryId": 2,
         "created_at": "2023-10-15T16:30:00Z"
@@ -55,7 +59,7 @@
         "name": "Strawberry Shortcake",
         "description": "A light and fruity strawberry shortcake",
         "price": 19.99,
-        "image_url": "product1.jpg",
+        "image_url": "product4.jpg",
         "available_quantity": 35,
         "categoryId": 3,
         "created_at": "2023-10-15T17:30:00Z"
@@ -65,7 +69,7 @@
         "name": "Carrot Cake",
         "description": "A moist and spiced carrot cake",
         "price": 23.99,
-        "image_url": "product1.jpg",
+        "image_url": "product5.jpg",
         "available_quantity": 25,
         "categoryId": 4,
         "created_at": "2023-10-15T18:30:00Z"
@@ -75,7 +79,7 @@
         "name": "Fruit Tart",
         "description": "A delightful fruit tart with a buttery crust",
         "price": 21.99,
-        "image_url": "product1.jpg",
+        "image_url": "product6.jpg",
         "available_quantity": 20,
         "categoryId": 1,
         "created_at": "2023-10-15T19:30:00Z"
@@ -85,7 +89,7 @@
         "name": "Cheesecake",
         "description": "A creamy and smooth cheesecake",
         "price": 29.99,
-        "image_url": "product1.jpg",
+        "image_url": "product7.jpg",
         "available_quantity": 15,
         "categoryId": 2,
         "created_at": "2023-10-15T20:30:00Z"
@@ -95,7 +99,7 @@
         "name": "Lemon Cake",
         "description": "A zesty and tangy lemon cake",
         "price": 26.99,
-        "image_url": "product1.jpg",
+        "image_url": "product8.jpg",
         "available_quantity": 10,
         "categoryId": 3,
         "created_at": "2023-10-15T21:30:00Z"
@@ -105,7 +109,7 @@
         "name": "Pineapple Upside-Down Cake",
         "description": "A classic pineapple upside-down cake",
         "price": 24.99,
-        "image_url": "product1.jpg",
+        "image_url": "product9.jpg",
         "available_quantity": 10,
         "categoryId": 4,
         "created_at": "2023-10-15T22:30:00Z"
@@ -115,7 +119,7 @@
         "name": "Black Forest Cake",
         "description": "A delightful black forest cake with cherries",
         "price": 28.99,
-        "image_url": "product1.jpg",
+        "image_url": "product10.jpg",
         "available_quantity": 5,
         "categoryId": 5,
         "created_at": "2023-10-15T23:30:00Z"

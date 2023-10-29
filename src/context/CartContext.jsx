@@ -8,7 +8,8 @@ const getDedaultCart = () => {
 export const CartContext = createContext({
   items: [],
   getQuantity: () => {},
-  add: () => {},
+  addOne: () => {},
+  addMultiple: () => {},
   remove: () => {},
   deleteAll: () => {},
   getTotalCost: () => {},
@@ -20,7 +21,7 @@ function CartProvider({ children }) {
     if (quantity === undefined) return 0;
     return quantity;
   };
-  const add = (product) => {
+  const addOne = (product) => {
     const quantity = getQuantity(product.id);
     if (quantity === 0) {
       setCartProduct((prev) => [...prev, { ...product, quantity: 1 }]);
@@ -28,6 +29,19 @@ function CartProvider({ children }) {
       setCartProduct((prev) =>
         prev.map((el) =>
           el.id === product.id ? { ...el, quantity: el.quantity + 1 } : el
+        )
+      );
+    }
+    console.log(cartProduct);
+  };
+  const addMultiple = (product, num) => {
+    const quantity = getQuantity(product.id);
+    if (quantity === 0) {
+      setCartProduct((prev) => [...prev, { ...product, quantity: num }]);
+    } else {
+      setCartProduct((prev) =>
+        prev.map((el) =>
+          el.id === product.id ? { ...el, quantity: el.quantity + num } : el
         )
       );
     }
@@ -50,18 +64,27 @@ function CartProvider({ children }) {
   };
   const getTotalCost = () => {
     let total = 0;
-    cartProduct.map((item) => {});
+    if (cartProduct.length > 0) {
+      cartProduct.map((item) => {
+        total = total + item.price * item.quantity;
+      });
+    }
+    return total;
   };
   const contextValue = {
     items: cartProduct,
     getQuantity,
-    add,
+    addOne,
+    addMultiple,
     remove,
     deleteAll,
     getTotalCost,
   };
   useEffect(() => {
     localStorage.setItem('items', JSON.stringify(cartProduct));
+    if (cartProduct.length === 0) {
+      localStorage.removeItem('items');
+    }
   }, [cartProduct]);
   return (
     <CartContext.Provider value={contextValue}>{children}</CartContext.Provider>

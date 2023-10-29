@@ -9,6 +9,9 @@ import OrderHistory from './pages/customer/OrderHistory';
 import Profile from './pages/customer/Profile';
 import Shop from './pages/customer/Shop';
 import CartProvider from './context/CartContext';
+import Checkout from './pages/customer/Checkout';
+import Test from './Test';
+import ProductDetails from './pages/customer/ProductDetails';
 
 function App() {
   const [open, setOpen] = useState(false);
@@ -32,10 +35,16 @@ function App() {
     <>
       <CartProvider>
         <Routes>
+          <Route path="/test" element={<Test />} />
           <Route element={<StudentLayout />}>
             <Route path="/" element={<Home />} />
             <Route path="/shop" element={<Shop />} />
+            <Route
+              path="/shop/:id/product-detail"
+              element={<ProductDetails />}
+            />
             <Route path="/cart" element={<Cart />} />
+            <Route path="/cart/checkout" element={<Checkout />} />
             <Route path="/history" element={<OrderHistory />} />
             <Route path="/profile" element={<Profile />} />
           </Route>
