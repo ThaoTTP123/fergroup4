@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import Card from '../../components/Card';
 import axios from 'axios';
 
@@ -27,7 +27,7 @@ export default function Home() {
         </div>
         <div className="grid md:grid-cols-4 gap-6 p-4">
           {featureCakes.map((product) => {
-            return <Card product={product} />;
+            return <Card key={product.id} product={product} />;
           })}
         </div>
       </div>
@@ -40,7 +40,7 @@ export default function Home() {
         </div>
         <div className="grid md:grid-cols-4 gap-6 p-4">
           {featureCakes.map((product) => {
-            return <Card product={product} />;
+            return <Card key={product.id} product={product} />;
           })}
         </div>
       </div>
